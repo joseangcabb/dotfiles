@@ -1,0 +1,12 @@
+font-family = "MonoLisa Nerd Font"
+font-size = 12
+
+theme = tokyonight
+
+shell-integration-features = no-cursor,sudo,no-title
+cursor-style = underline
+
+window-decoration = none
+window-save-state = always
+
+confirm-close-surface = false
