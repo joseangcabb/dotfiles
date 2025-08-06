@@ -25,9 +25,11 @@
 # SOFTWARE.
 
 import os
+import time
+import subprocess
 
 import libqtile.resources
-from libqtile import bar, layout, qtile, widget
+from libqtile import bar, layout, qtile, widget, hook
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
@@ -101,7 +103,7 @@ for vt in range(1, 8):
     )
 
 
-groups = [Group(i) for i in "123456789"]
+groups = [Group(i) for i in "1234567"]
 
 for i in groups:
     keys.extend(
@@ -237,3 +239,10 @@ wl_xcursor_size = 24
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
+
+@hook.subscribe.startup_once
+def autostart():
+    # time.sleep(0.2)
+    subprocess.Popen(
+        [os.path.expanduser("~/.config/qtile/scripts/autostart.sh")]
+    )
