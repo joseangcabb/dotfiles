@@ -25,8 +25,6 @@
 # SOFTWARE.
 
 import os
-import time
-import subprocess
 
 import libqtile.resources
 from libqtile import bar, layout, qtile, widget, hook
@@ -179,9 +177,9 @@ screens = [
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
-        background="#000000",
-        wallpaper=logo,
-        wallpaper_mode="center",
+        # background="#000000",
+        # wallpaper=logo,
+        # wallpaper_mode="center",
         # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
         # By default we handle these events delayed to already improve performance, however your system might still be struggling
         # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
@@ -239,10 +237,3 @@ wl_xcursor_size = 24
 # We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
 # java that happens to be on java's whitelist.
 wmname = "LG3D"
-
-@hook.subscribe.startup_once
-def autostart():
-    # time.sleep(0.2)
-    subprocess.Popen(
-        [os.path.expanduser("~/.config/qtile/scripts/autostart.sh")]
-    )
