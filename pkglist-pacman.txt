@@ -25,3 +25,6 @@ tmux
 neovim
 nitrogen
 picom
+noto-fonts
+noto-fonts-emoji
+noto-fonts-cjk
