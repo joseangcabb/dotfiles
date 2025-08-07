@@ -19,7 +19,6 @@ git
 chezmoi
 gradle
 kotlin
-ktlin
 tk
 docker
 docker-compose
