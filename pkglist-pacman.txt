@@ -19,7 +19,6 @@ git
 chezmoi
 gradle
 kotlin
-tk
 docker
 docker-compose
 tmux
