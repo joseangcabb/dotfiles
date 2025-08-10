@@ -26,6 +26,17 @@ eval "$(starship init zsh)"
 export STARSHIP_CONFIG="$HOME/.config/startship/starship.toml"
 
 #############################
+# ZSH Completions
+#############################
+
+# Enable extra completions.
+fpath=(/usr/share/zsh/site-functions $fpath)
+
+# Initialize zsh completions system.
+autoload -Uz compinit
+compinit
+
+#############################
 # ZSH Autosuggestions
 #############################
 
