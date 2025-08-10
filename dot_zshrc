@@ -11,3 +11,8 @@ setopt HIST_SAVE_NO_DUPS  # Don't save duplicates to file .
 # Startship integration.
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG="$HOME/.config/startship/starship.toml"
+
+# NVM (Node Version Manager).
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
