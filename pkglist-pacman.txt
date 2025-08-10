@@ -32,3 +32,4 @@ zsh
 starship
 fzf
 zsh-syntax-highlighting
+zsh-autosuggestions

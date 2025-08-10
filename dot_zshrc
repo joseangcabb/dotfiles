@@ -26,6 +26,13 @@ eval "$(starship init zsh)"
 export STARSHIP_CONFIG="$HOME/.config/startship/starship.toml"
 
 #############################
+# ZSH Autosuggestions
+#############################
+
+# Load zsh-autosuggestions.
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+#############################
 # ZSH Highlighting Setup
 #############################
 
