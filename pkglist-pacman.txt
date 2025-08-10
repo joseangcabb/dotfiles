@@ -28,3 +28,10 @@ picom
 noto-fonts
 noto-fonts-emoji
 noto-fonts-cjk
+zsh
+starship
+bat
+fzf
+zsh-syntax-highlighting
+zsh-autosuggestions
+zsh-completions
