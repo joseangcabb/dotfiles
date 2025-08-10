@@ -8,6 +8,9 @@ setopt SHARE_HISTORY  # Share history between open sessions.
 setopt HIST_IGNORE_DUPS  # Don't save consecutive duplicate commands.
 setopt HIST_SAVE_NO_DUPS  # Don't save duplicates to file .
 
+# Set up fzf key bindings and fuzzy completion.
+source <(fzf --zsh)
+
 # Startship integration.
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG="$HOME/.config/startship/starship.toml"
