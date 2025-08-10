@@ -80,3 +80,5 @@ export NVM_DIR="$HOME/.nvm"
 
 alias gs="git status"
 alias gp="git pull --all" 
+
+export EDITOR="nvim"
