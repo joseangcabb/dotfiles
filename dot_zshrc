@@ -18,6 +18,9 @@ setopt HIST_SAVE_NO_DUPS  # Don't save duplicates to file .
 # Set up fzf key bindings and fuzzy completion.
 source <(fzf --zsh)
 
+# Preview
+export FZF_DEFAULT_OPTS='--preview "if [ -d {} ]; then ls -lha --color=always {}; else bat --style=numbers --color=always --line-range :500 {}; fi" --height 100% --layout=reverse --border'
+
 #############################
 # Startship
 #############################
