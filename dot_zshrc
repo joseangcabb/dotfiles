@@ -15,6 +15,17 @@ source <(fzf --zsh)
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG="$HOME/.config/startship/starship.toml"
 
+# Activate highlighters for zsh-syntax-highlighting.
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor root)
+
+# Load zsh-syntax-highlighting.
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Custom zsh-syntax-highlighting styles.
+(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=cyan'
+
 # NVM (Node Version Manager).
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"

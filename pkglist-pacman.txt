@@ -31,3 +31,4 @@ noto-fonts-cjk
 zsh
 starship
 fzf
+zsh-syntax-highlighting
