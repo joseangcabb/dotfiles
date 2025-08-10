@@ -1,0 +1,9 @@
+# History settings.
+HISTFILE=~/.zsh_history
+HISTSIZE=10000  # Size of history in memory.
+SAVEHIST=10000  # Size of history saved to disk.
+setopt APPEND_HISTORY  # Append instead of overwrite.
+setopt INC_APPEND_HISTORY  # Save each command as it is executed.
+setopt SHARE_HISTORY  # Share history between open sessions.
+setopt HIST_IGNORE_DUPS  # Don't save consecutive duplicate commands.
+setopt HIST_SAVE_NO_DUPS  # Don't save duplicates to file .
