@@ -1,0 +1,84 @@
+#############################
+# History
+#############################
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000  # Size of history in memory.
+SAVEHIST=10000  # Size of history saved to disk.
+setopt APPEND_HISTORY  # Append instead of overwrite.
+setopt INC_APPEND_HISTORY  # Save each command as it is executed.
+setopt SHARE_HISTORY  # Share history between open sessions.
+setopt HIST_IGNORE_DUPS  # Don't save consecutive duplicate commands.
+setopt HIST_SAVE_NO_DUPS  # Don't save duplicates to file .
+
+#############################
+# fzf (Fuzzy Finder)
+#############################
+
+# Set up fzf key bindings and fuzzy completion.
+source <(fzf --zsh)
+
+# Preview
+export FZF_DEFAULT_OPTS='--preview "if [ -d {} ]; then ls -lha --color=always {}; else bat --style=numbers --color=always --line-range :500 {}; fi" --height 100% --layout=reverse --border'
+
+#############################
+# Startship
+#############################
+
+eval "$(starship init zsh)"
+export STARSHIP_CONFIG="$HOME/.config/startship/starship.toml"
+
+#############################
+# ZSH Completions
+#############################
+
+# Enable extra completions.
+fpath=(/usr/share/zsh/site-functions $fpath)
+
+# Initialize zsh completions system.
+autoload -Uz compinit
+compinit
+
+#############################
+# fzf Tab
+#############################
+
+# Load fzf-tab.
+source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
+
+# Switch between different groups using '<' and '>'.
+zstyle ':fzf-tab:*' switch-group '<' '>'
+
+#############################
+# ZSH Autosuggestions
+#############################
+
+# Load zsh-autosuggestions.
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+#############################
+# ZSH Highlighting Setup
+#############################
+
+# Activate highlighters for zsh-syntax-highlighting.
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor root)
+
+# Load zsh-syntax-highlighting.
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# Custom zsh-syntax-highlighting styles.
+(( ${+ZSH_HIGHLIGHT_STYLES} )) || typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=cyan'
+
+#############################
+# NVM (Node Version Manager)
+#############################
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
+
+alias gs="git status"
+alias gp="git pull --all" 
+
+export EDITOR="nvim"
