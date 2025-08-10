@@ -40,6 +40,16 @@ autoload -Uz compinit
 compinit
 
 #############################
+# fzf Tab
+#############################
+
+# Load fzf-tab.
+source /usr/share/zsh/plugins/fzf-tab-git/fzf-tab.plugin.zsh
+
+# Switch between different groups using '<' and '>'.
+zstyle ':fzf-tab:*' switch-group '<' '>'
+
+#############################
 # ZSH Autosuggestions
 #############################
 
