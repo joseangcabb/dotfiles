@@ -1,4 +1,7 @@
-# History settings.
+##############################
+# History
+#############################
+
 HISTFILE=~/.zsh_history
 HISTSIZE=10000  # Size of history in memory.
 SAVEHIST=10000  # Size of history saved to disk.
@@ -8,12 +11,23 @@ setopt SHARE_HISTORY  # Share history between open sessions.
 setopt HIST_IGNORE_DUPS  # Don't save consecutive duplicate commands.
 setopt HIST_SAVE_NO_DUPS  # Don't save duplicates to file .
 
+#############################
+# fzf (Fuzzy Finder)
+#############################
+
 # Set up fzf key bindings and fuzzy completion.
 source <(fzf --zsh)
 
-# Startship integration.
+#############################
+# Startship
+#############################
+
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG="$HOME/.config/startship/starship.toml"
+
+#############################
+# ZSH Highlighting Setup
+#############################
 
 # Activate highlighters for zsh-syntax-highlighting.
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets cursor root)
@@ -26,7 +40,9 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
 ZSH_HIGHLIGHT_STYLES[path_prefix]='fg=cyan'
 
-# NVM (Node Version Manager).
+#############################
+# NVM (Node Version Manager)
+#############################
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && source "$NVM_DIR/bash_completion"
