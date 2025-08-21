@@ -1,8 +1,9 @@
+-- Provides AI-assisted coding, editing, and chat features.
 return {
 	"yetone/avante.nvim",
 	build = "make",
 	event = "VeryLazy",
-	version = false, -- Never set this value to "*"! Never!
+	version = false,
 	---@module 'avante'
 	---@type avante.Config
 	opts = {
@@ -11,17 +12,15 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"MunifTanjim/nui.nvim",
-		--- The below dependencies are optional,
-		-- "echasnovski/mini.pick", -- for file_selector provider mini.pick
-		"nvim-telescope/telescope.nvim", -- for file_selector provider telescope
-		-- "ibhagwan/fzf-lua", -- for file_selector provider fzf
-		"hrsh7th/nvim-cmp", -- autocompletion for avante commands and mentions
-		"stevearc/dressing.nvim", -- for input provider dressing
-		-- "folke/snacks.nvim", -- for input provider snacks
-		"nvim-tree/nvim-web-devicons", -- or echasnovski/mini.icons
-		"zbirenbaum/copilot.lua", -- for providers='copilot'
+
+		--- The optional dependencies.
+		"nvim-telescope/telescope.nvim", -- File selector.
+		"hrsh7th/nvim-cmp", -- Autocompletion for avante commands and mentions,
+		"stevearc/dressing.nvim", -- UI for user input prompts and dialogs.
+		"nvim-tree/nvim-web-devicons", -- Icons for UI elements.
+		"zbirenbaum/copilot.lua", -- Enables GitHub Copilot as a provider for Avante.
 		{
-			-- Make sure to set this up properly if you have lazy=true
+			-- Avante responses are formatted in Markdown.
 			"MeanderingProgrammer/render-markdown.nvim",
 			opts = {
 				file_types = { "markdown", "Avante" },
