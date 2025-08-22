@@ -26,6 +26,7 @@ return {
 				{ name = "nvim_lsp" },
 				{ name = "copilot" },
 				{ name = "luasnip" },
+				{ name = "path" },
 			}, {
 				{ name = "buffer", keyword_length = 3 },
 			}),
@@ -36,6 +37,7 @@ return {
 						luasnip = "[Snip]",
 						buffer = "[Buf]",
 						copilot = "[Copilot]",
+						path = "[Path]",
 					})[entry.source.name]
 					return item
 				end,
