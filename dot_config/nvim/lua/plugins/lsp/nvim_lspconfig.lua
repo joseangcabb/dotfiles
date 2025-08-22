@@ -38,6 +38,10 @@ return {
 			},
 		})
 
+		lspconfig.ts_ls.setup({
+		  capabilities = capabilities,
+		})
+
 		vim.diagnostic.config({
 			virtual_text = true,
 		})
