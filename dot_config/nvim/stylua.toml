@@ -1,0 +1,17 @@
+# Maximum line length
+column_width = 100
+
+# Type of line endings to use ("Unix" for LF, "Windows" for CRLF)
+line_endings = "Unix"
+
+# Type of indentation to use ("Spaces" or "Tabs")
+indent_type = "Spaces"
+
+# Number of spaces/tabs for indentation
+indent_width = 2
+
+# Quote style preference ("AutoPreferDouble", "AutoPreferSingle", "AlwaysDouble", "AlwaysSingle", "None")
+quote_style = "AutoPreferDouble"
+
+# Parentheses style for function calls ("Always", "Input", "None")
+call_parentheses = "Always"
