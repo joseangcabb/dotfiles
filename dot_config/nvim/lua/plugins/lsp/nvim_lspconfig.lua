@@ -39,7 +39,29 @@ return {
 		})
 
 		lspconfig.ts_ls.setup({
-		  capabilities = capabilities,
+			capabilities = capabilities,
+		})
+
+		lspconfig.emmet_ls.setup({
+			capabilities = capabilities,
+			filetypes = {
+				"css",
+				"html",
+				"javascript",
+				"javascriptreact",
+				"less",
+				"sass",
+				"scss",
+				"typescriptreact",
+			},
+			init_options = {
+				html = {
+					options = {
+						-- For possible options.
+						-- https://github.com/emmetio/emmet/blob/master/src/config.ts#L79-L267
+					},
+				},
+			},
 		})
 
 		vim.diagnostic.config({

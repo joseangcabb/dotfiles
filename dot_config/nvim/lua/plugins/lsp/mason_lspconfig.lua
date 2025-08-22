@@ -4,7 +4,13 @@ return {
   "williamboman/mason-lspconfig.nvim",
   config = function()
     require("mason-lspconfig").setup({
-      ensure_installed = { "lua_ls", "pylsp", "kotlin_language_server", "ts_ls" },
+      ensure_installed = {
+        "lua_ls",
+        "pylsp",
+        "kotlin_language_server",
+        "ts_ls",
+        "emmet_ls",
+      },
     })
   end,
 }
