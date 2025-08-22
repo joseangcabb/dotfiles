@@ -20,4 +20,9 @@ return {
 			desc = "Live grep",
 		},
 	},
+	opts = {
+		defaults = {
+			file_ignore_patterns = { "node_modules", ".git" },
+		},
+	},
 }
