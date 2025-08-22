@@ -1,6 +1,9 @@
 -- none-ls.nvim (an updated fork of null-ls) allows using external tools (formatters, linters) as LSP sources.
 return {
   "nvimtools/none-ls.nvim",
+	dependencies = {
+    "nvimtools/none-ls-extras.nvim",
+	},
   event = { "BufReadPre", "BufNewFile" },
   keys = {
     {
@@ -20,6 +23,8 @@ return {
         null_ls.builtins.formatting.ktlint.with({
           extra_args = { "--indent-size=4" },
         }),
+        null_ls.builtins.formatting.prettierd,
+        require("none-ls.diagnostics.eslint_d"),
       },
     })
   end,

@@ -22,20 +22,23 @@ return {
 				["<C-e>"] = cmp.mapping.abort(),
 				["<CR>"] = cmp.mapping.confirm({ select = true }),
 			}),
+
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp" },
 				{ name = "copilot" },
+				{ name = "buffer" },
 				{ name = "luasnip" },
-			}, {
-				{ name = "buffer", keyword_length = 3 },
+				{ name = "path" },
 			}),
+
 			formatting = {
 				format = function(entry, item)
 					item.menu = ({
 						nvim_lsp = "[LSP]",
 						luasnip = "[Snip]",
-						buffer = "[Buf]",
+						buffer = "[Buffer]",
 						copilot = "[Copilot]",
+						path = "[Path]",
 					})[entry.source.name]
 					return item
 				end,
