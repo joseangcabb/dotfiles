@@ -2,32 +2,6 @@
 -- for many language servers without installing them.
 return {
 	"neovim/nvim-lspconfig",
-	keys = {
-		{
-			"K",
-			function()
-				vim.lsp.buf.hover()
-			end,
-			desc = "LSP hover",
-      mode = "n",
-		},
-		{
-			"<leader>ld",
-			function()
-				vim.lsp.buf.definition()
-			end,
-			desc = "LSP go to definition",
-      mode = "n",
-		},
-		{
-			"<leader>la",
-			function()
-				vim.lsp.buf.code_action()
-			end,
-			mode = { "n", "v" },
-			desc = "LSP code action",
-		},
-	},
 	config = function()
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 		local lspconfig = require("lspconfig")
@@ -67,5 +41,9 @@ return {
 		vim.diagnostic.config({
 			virtual_text = true,
 		})
+
+		vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
+		vim.keymap.set("n", "<leader>ld", vim.lsp.buf.definition, {})
+		vim.keymap.set({ "n", "v" }, "<leader>la", vim.lsp.buf.code_action, {})
 	end,
 }
