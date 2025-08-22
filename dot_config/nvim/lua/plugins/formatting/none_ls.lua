@@ -20,6 +20,7 @@ return {
         null_ls.builtins.formatting.ktlint.with({
           extra_args = { "--indent-size=4" },
         }),
+        null_ls.builtins.formatting.prettierd,
       },
     })
   end,
