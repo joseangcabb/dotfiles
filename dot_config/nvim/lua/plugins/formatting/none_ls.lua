@@ -1,14 +1,16 @@
 -- none-ls.nvim (an updated fork of null-ls) allows using external tools (formatters, linters) as LSP sources.
 return {
   "nvimtools/none-ls.nvim",
-	dependencies = {
+  dependencies = {
     "nvimtools/none-ls-extras.nvim",
-	},
+  },
   event = { "BufReadPre", "BufNewFile" },
   keys = {
     {
       "<leader>fl",
-      function() vim.lsp.buf.format() end,
+      function()
+        vim.lsp.buf.format()
+      end,
       desc = "Format buffer with LSP",
       mode = "n",
     },

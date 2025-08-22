@@ -3,7 +3,7 @@
 return {
   "mfussenegger/nvim-dap",
   dependencies = {
-    "rcarriga/nvim-dap-ui",  -- UI for debugging
+    "rcarriga/nvim-dap-ui", -- UI for debugging
     "nvim-neotest/nvim-nio", -- Support for async operations
   },
   keys = {
@@ -17,19 +17,25 @@ return {
     },
     {
       "<leader>dc",
-      function() require("dap").continue() end,
+      function()
+        require("dap").continue()
+      end,
       desc = "continue execution",
       mode = "n",
     },
     {
       "<leader>dx",
-      function() require("dap").terminate() end,
+      function()
+        require("dap").terminate()
+      end,
       desc = "Terminate debugging",
       mode = "n",
     },
     {
       "<leader>do",
-      function() require("dap").step_over() end,
+      function()
+        require("dap").step_over()
+      end,
       desc = "Step over",
       mode = "n",
     },
