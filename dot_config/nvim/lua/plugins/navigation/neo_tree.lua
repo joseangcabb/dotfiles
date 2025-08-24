@@ -25,6 +25,12 @@ return {
       desc = "Close Neo-tree",
       mode = "n",
     },
+    {
+      "<leader>nt",
+      "<cmd>Neotree toggle<CR>",
+      desc = "Toggle Neo-tree",
+      mode = "n",
+    },
   },
   opts = {
     filesystem = {
