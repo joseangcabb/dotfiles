@@ -26,4 +26,11 @@ return {
       mode = "n",
     },
   },
+  opts = {
+    filesystem = {
+      filtered_items = {
+        visible = true,
+      },
+    },
+  },
 }
