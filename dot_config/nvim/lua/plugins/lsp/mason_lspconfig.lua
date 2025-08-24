@@ -10,6 +10,7 @@ return {
         "kotlin_language_server",
         "ts_ls",
         "emmet_ls",
+        "eslint"
       },
     })
   end,

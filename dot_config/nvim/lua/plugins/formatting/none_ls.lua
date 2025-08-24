@@ -26,7 +26,7 @@ return {
           extra_args = { "--indent-size=4" },
         }),
         null_ls.builtins.formatting.prettierd,
-        require("none-ls.diagnostics.eslint_d"),
+        -- require("none-ls.diagnostics.eslint_d"),
       },
     })
   end,

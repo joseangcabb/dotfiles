@@ -8,7 +8,7 @@ return {
     require("mason-null-ls").setup({
       ensure_installed = {
         "prettierd",
-        "eslint_d",
+        -- "eslint_d",
       },
       run_on_start = true,
       auto_update = true,
