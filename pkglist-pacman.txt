@@ -36,3 +36,4 @@ zsh-syntax-highlighting
 zsh-autosuggestions
 zsh-completions
 python-pipx
+python-pynvim
