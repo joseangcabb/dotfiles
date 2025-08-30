@@ -13,6 +13,7 @@ return {
 
         -- Python
         "pyright", -- LSP
+        "ruff", -- Linter + isort-like
       },
 
     })

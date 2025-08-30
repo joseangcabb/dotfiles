@@ -14,4 +14,19 @@ return function(lspconfig, capabilities)
       },
     },
   })
+
+  lspconfig.ruff.setup({
+    capabilities = capabilities,
+
+    init_options = {
+      settings = {
+        logLevel = "debug",
+      },
+    },
+
+    on_attach = function(client, bufnr)
+      -- Disable hover in favor of Pyright
+      client.server_capabilities.hoverProvider = false
+    end,
+  })
 end
