@@ -11,7 +11,8 @@ return {
         -- "eslint_d",
 
         -- Python
-        "mypy", -- Type checking
+        "mypy",  -- Type checking
+        "black", -- Formatter
       },
       run_on_start = true,
       auto_update = true,

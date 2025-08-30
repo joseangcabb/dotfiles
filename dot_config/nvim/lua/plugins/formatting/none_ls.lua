@@ -32,6 +32,7 @@ return {
         null_ls.builtins.diagnostics.mypy.with({
           extra_args = { "--ignore-missing-imports" },
         }),
+        null_ls.builtins.formatting.black,
       },
     })
   end,
