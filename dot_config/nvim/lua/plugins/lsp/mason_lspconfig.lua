@@ -6,12 +6,15 @@ return {
     require("mason-lspconfig").setup({
       ensure_installed = {
         "lua_ls",
-        "pylsp",
         "kotlin_language_server",
         "ts_ls",
         "emmet_ls",
-        "eslint"
+        "eslint",
+
+        -- Python
+        "pyright", -- LSP
       },
+
     })
   end,
 }

@@ -11,22 +11,6 @@ return {
       filetypes = { "lua" },
     })
 
-    lspconfig.pylsp.setup({
-      capabilities = capabilities,
-      settings = {
-        pylsp = {
-          plugins = {
-            autopep8 = {
-              enabled = false,
-            },
-            flake8 = {
-              enabled = true,
-            },
-          },
-        },
-      },
-    })
-
     lspconfig.kotlin_language_server.setup({
       filetypes = { "kotlin", "kt" },
       settings = {
@@ -65,6 +49,8 @@ return {
     })
 
     lspconfig.eslint.setup({})
+
+    require("plugins.lsp.configs.python")(lspconfig, capabilities)
 
     vim.diagnostic.config({
       virtual_text = true,
