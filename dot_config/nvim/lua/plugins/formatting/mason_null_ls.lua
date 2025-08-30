@@ -9,6 +9,9 @@ return {
       ensure_installed = {
         "prettierd",
         -- "eslint_d",
+
+        -- Python
+        "mypy", -- Type checking
       },
       run_on_start = true,
       auto_update = true,

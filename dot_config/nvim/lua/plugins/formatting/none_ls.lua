@@ -27,6 +27,11 @@ return {
         }),
         null_ls.builtins.formatting.prettierd,
         -- require("none-ls.diagnostics.eslint_d"),
+
+        -- Python
+        null_ls.builtins.diagnostics.mypy.with({
+          extra_args = { "--ignore-missing-imports" },
+        }),
       },
     })
   end,
