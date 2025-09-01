@@ -36,7 +36,15 @@ return {
     filesystem = {
       filtered_items = {
         hide_dotfiles = false,
-        hide_by_name = { "node_modules" },
+        hide_by_name = {
+          "node_modules",
+
+          -- Python
+          ".mypy_cache",
+          ".pytest_cache",
+          "__pycache__",
+
+        },
       },
     },
   },

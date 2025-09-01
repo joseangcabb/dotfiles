@@ -22,7 +22,15 @@ return {
   },
   opts = {
     defaults = {
-      file_ignore_patterns = { "node_modules", ".git" },
+      file_ignore_patterns = {
+        ".git",
+        "node_modules",
+
+        -- Python
+        ".mypy_cache",
+        ".pytest_cache",
+        "__pycache__",
+      },
     },
 
     pickers = {
