@@ -3,4 +3,5 @@ return {
   require("plugins.debugging.mason_nvim_dap"),
   require("plugins.debugging.lua_nvim"),
   require("plugins.debugging.nvim_dap"),
+  require("plugins.debugging.nvim-dap-python"),
 }

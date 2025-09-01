@@ -83,5 +83,13 @@ return {
         name = "Attach to running Neovim instance",
       },
     }
+
+    -- Python
+    python_path = vim.fn.expand("~/.local/share/nvim/mason/packages/debugpy/venv/bin/python")
+    dap.adapters.python = {
+      type = "executable",
+      command = python_path,
+      args = { "-m", "debugpy.adapter" },
+    }
   end,
 }
